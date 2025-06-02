@@ -1,6 +1,7 @@
 import React from "react";
 import TeamImage from "../../../assets/Owner1.png"; // Left side full image
 import CEOImage from "../../../assets/Owner2.png"; // Right side small image
+import { FiRepeat, FiDollarSign, FiBarChart2 } from 'react-icons/fi';
 
 const TestimonialsSection: React.FC = () => {
   return (
@@ -36,13 +37,21 @@ const TestimonialsSection: React.FC = () => {
             </div>
             <div className="border-t border-gray-200 my-6"></div>
 
-            <div className="flex justify-between">
+            <div className="flex justify-between items-center">
               <h3 className="text-base font-medium text-gray-800 mb-3">
                 Bravado's favorite features
               </h3>
-              <span className="mr-2">Workflows</span>
-              <span className="mr-2"> Deals</span>
-              <span className="mr-2">Reports</span>
+              <div className="flex space-x-4">
+                <span className="flex items-center text-sm">
+                  <FiRepeat className="mr-1" /> Workflows
+                </span>
+                <span className="flex items-center text-sm">
+                  <FiDollarSign className="mr-1" /> Deals
+                </span>
+                <span className="flex items-center text-sm">
+                  <FiBarChart2 className="mr-1" /> Reports
+                </span>
+              </div>
             </div>
           </div>
         </div>

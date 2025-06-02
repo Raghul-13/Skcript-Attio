@@ -4,21 +4,68 @@ import Tab2 from "../../../assets/Automation_Tab.png"
 import Tab3 from "../../../assets/Pipeline_Tab.png"
 import Tab4 from "../../../assets/Productivity_Tab.png"
 import Tab5 from "../../../assets/Reporting_Tab.png"
+import { 
+  FiBell, 
+  FiCheckSquare, 
+  FiFileText, 
+  FiMail, 
+  FiBarChart2,
+  FiZap,
+  FiRepeat,
+  FiList,
+  FiStar,
+  FiUsers,
+  FiFilter,
+  FiTrendingUp,
+  FiDatabase,
+  FiBriefcase,
+  FiUser,
+  FiDollarSign,
+  FiGrid,
+  FiLink,
+  FiBookmark,
+  FiDatabase as FiData,
+  FiSettings,
+  FiBarChart,
+  FiActivity,
+  FiTrendingUp as FiProductivity
+} from 'react-icons/fi';
 
 export default function BasepointDashboard() {
   const [activeTab, setActiveTab] = useState('Data');
 
-  const tabs = ['Data', 'Automation', 'Pipeline', 'Productivity', 'Reporting'];
+  const tabs = [
+    { name: 'Data', icon: <FiData className="mr-2" /> },
+    { name: 'Automation', icon: <FiSettings className="mr-2" /> },
+    { name: 'Pipeline', icon: <FiActivity className="mr-2" /> },
+    { name: 'Productivity', icon: <FiProductivity className="mr-2" /> },
+    { name: 'Reporting', icon: <FiBarChart className="mr-2" /> }
+  ];
 
   const quickActions = [
-    'Notifications', 'Tasks', 'Notes', 'Emails', 'Reports', 
-    'Automations', 'Workflows', 'Sequences', 'Favorites',
-    'Onboarding pipeline', 'Top of funnel', 'RevOps workflows'
+    { name: 'Notifications', icon: <FiBell className="mr-2" /> },
+    { name: 'Tasks', icon: <FiCheckSquare className="mr-2" /> },
+    { name: 'Notes', icon: <FiFileText className="mr-2" /> },
+    { name: 'Emails', icon: <FiMail className="mr-2" /> },
+    { name: 'Reports', icon: <FiBarChart2 className="mr-2" /> },
+    { name: 'Automations', icon: <FiZap className="mr-2" /> },
+    { name: 'Workflows', icon: <FiRepeat className="mr-2" /> },
+    { name: 'Sequences', icon: <FiList className="mr-2" /> },
+    { name: 'Favorites', icon: <FiStar className="mr-2" /> },
+    { name: 'Onboarding pipeline', icon: <FiUsers className="mr-2" /> },
+    { name: 'Top of funnel', icon: <FiFilter className="mr-2" /> },
+    { name: 'RevOps workflows', icon: <FiTrendingUp className="mr-2" /> }
   ];
 
   const records = [
-    'Records', 'Companies', 'People', 'Deals', 'Workspaces',
-    'Partnerships', 'Lists', 'Strategic accounts'
+    { name: 'Records', icon: <FiDatabase className="mr-2" /> },
+    { name: 'Companies', icon: <FiBriefcase className="mr-2" /> },
+    { name: 'People', icon: <FiUser className="mr-2" /> },
+    { name: 'Deals', icon: <FiDollarSign className="mr-2" /> },
+    { name: 'Workspaces', icon: <FiGrid className="mr-2" /> },
+    { name: 'Partnerships', icon: <FiLink className="mr-2" /> },
+    { name: 'Lists', icon: <FiBookmark className="mr-2" /> },
+    { name: 'Strategic accounts', icon: <FiBriefcase className="mr-2" /> }
   ];
 
   return (
@@ -28,16 +75,17 @@ export default function BasepointDashboard() {
           <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2">
             {tabs.map((tab) => (
               <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`whitespace-nowrap py-1 px-1 font-medium text-sm relative border rounded ${
-                  activeTab === tab
+                key={tab.name}
+                onClick={() => setActiveTab(tab.name)}
+                className={`whitespace-nowrap py-1 px-3 font-medium text-sm relative border rounded flex items-center ${
+                  activeTab === tab.name
                     ? 'text-gray-900'
                     : 'text-gray-500 hover:text-gray-700'
                 }`}
               >
-                {tab}
-                {activeTab === tab && (
+                {tab.icon}
+                {tab.name}
+                {activeTab === tab.name && (
                   <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-500 rounded-t"></div>
                 )}
               </button>
@@ -58,9 +106,10 @@ export default function BasepointDashboard() {
                 </h3>
                 <ul className="space-y-1">
                   {quickActions.map((action) => (
-                    <li key={action}>
-                      <a href="#" className="text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-2 py-1 rounded">
-                        {action}
+                    <li key={action.name}>
+                      <a href="#" className="flex items-center text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-2 py-1 rounded">
+                        {action.icon}
+                        {action.name}
                       </a>
                     </li>
                   ))}
@@ -73,9 +122,10 @@ export default function BasepointDashboard() {
                 </h3>
                 <ul className="space-y-1">
                   {records.map((record) => (
-                    <li key={record}>
-                      <a href="#" className="text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-2 py-1 rounded">
-                        {record}
+                    <li key={record.name}>
+                      <a href="#" className="flex items-center text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-2 py-1 rounded">
+                        {record.icon}
+                        {record.name}
                       </a>
                     </li>
                   ))}

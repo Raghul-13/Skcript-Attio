@@ -46,8 +46,10 @@ const TestimonialSection:React.FC = () => {
             <p className="text-sm font-bold text-gray-600">Head of Business Operations — Modal</p>
           </div>
         </div>
-
-        <div className={`border-t border-gray-200 pt-8 transition-colors duration-700 ${isVisible ? 'text-black' : 'text-gray-400'}`}>
+      </div>
+    </section>
+    <section className='bg-white px-2 pb-10'>
+      <div className={`border-t border-gray-200 pt-8 transition-colors duration-700 ${isVisible ? 'text-black' : 'text-gray-400'}`}>
           <div className="flex justify-between items-center">
             <div className="flex items-center">
               <span className="text-xs font-mono mr-2">[01]</span>
@@ -58,7 +60,6 @@ const TestimonialSection:React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
     </section>
     <section className="py-5 sm:pt-2 sm:pb-4 px-6 bg-white">
         <div className="w-full max-w-2xl lg:ms-50 sm:text-center">

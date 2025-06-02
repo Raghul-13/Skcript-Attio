@@ -20,7 +20,7 @@ const DataModelSection:React.FC = () => {
           </div>
           <div className="md:w-1/2">
             <img 
-              src={DataModal} // Replace with your actual image path
+              src={DataModal}
               alt="Pro trial dashboard preview"
               className="w-full h-auto rounded-lg shadow-md border border-gray-200"
             />
@@ -45,9 +45,6 @@ const DataModelSection:React.FC = () => {
 
           <Button className="flex items-center border border-gray-300 hover:bg-gray-50 transition-colors bg-white">
             Explore our data model
-            <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
           </Button>
           </div>
         </div>
