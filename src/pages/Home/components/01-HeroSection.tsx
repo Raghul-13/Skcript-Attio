@@ -20,7 +20,7 @@ export default function HeroSection() {
             }}
           />
           <div className="absolute inset-[2px] rounded-full bg-gray-100" />
-          <span className="relative z-10">Auto for desktop is here</span>
+          <span className="relative z-10">Attio for desktop is here</span>
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -29,7 +29,7 @@ export default function HeroSection() {
         </h1>
 
         <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-          Attic is the AI-native CRM that builds, scales and<br />
+          Attio is the AI-native CRM that builds, scales and<br />
           grows your company to the next level.
         </p>
 

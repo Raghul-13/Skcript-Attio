@@ -45,15 +45,3 @@ yarn dev: Starts the development server
 yarn build: Creates a production build
 
 yarn preview: Previews the production build locally
-
-#### Project Structure
-
-SKCRIPT-TASK/
-├── src/
-│   ├── components/    # Reusable components
-│   ├── assets/        # Static assets
-│   ├── pages/         # HomePage
-│   └── main.tsx       # Application entry point
-├── public/            # Public assets
-├── vite.config.ts     # Vite configuration
-└── package.json       # Project dependencies

@@ -1,13 +1,13 @@
 import React from "react";
 import TeamImage from "../../../assets/Owner1.png"; // Left side full image
 import CEOImage from "../../../assets/Owner2.png"; // Right side small image
-import { FiRepeat, FiDollarSign, FiBarChart2 } from 'react-icons/fi';
+import { FiRepeat, FiDollarSign, FiBarChart2 } from "react-icons/fi";
 
 const TestimonialsSection: React.FC = () => {
   return (
     <div className="max-w-7xl">
       <div className="grid grid-cols-1 lg:grid-cols-3">
-        <div className="lg:col-span-1 h-full bg-white">
+        <div className="hidden lg:block lg:col-span-1 h-full bg-white">
           <img
             src={TeamImage}
             alt="Bravado team members"
@@ -37,11 +37,11 @@ const TestimonialsSection: React.FC = () => {
             </div>
             <div className="border-t border-gray-200 my-6"></div>
 
-            <div className="flex justify-between items-center">
-              <h3 className="text-base font-medium text-gray-800 mb-3">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+              <h3 className="text-base font-medium text-gray-800 sm:mb-3">
                 Bravado's favorite features
               </h3>
-              <div className="flex space-x-4">
+              <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-5 sm:space-y-0 mt-2 sm:mt-0">
                 <span className="flex items-center text-sm">
                   <FiRepeat className="mr-1" /> Workflows
                 </span>
